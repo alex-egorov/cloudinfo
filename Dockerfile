@@ -1,5 +1,5 @@
 # UI build image
-FROM node:16.2.0 as frontend
+FROM node:16.3.0 as frontend
 
 WORKDIR /web
 
@@ -46,7 +46,7 @@ RUN set -xe && \
 
 
 # Final image
-FROM alpine:3.13.5
+FROM alpine:3.14.0
 
 RUN apk add --update --no-cache ca-certificates tzdata bash curl
 
